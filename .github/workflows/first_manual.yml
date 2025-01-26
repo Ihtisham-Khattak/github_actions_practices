@@ -27,4 +27,4 @@ jobs:
       run:  echo "Hello World"
 
     - name: Github Action Context
-      run: Hello ${{toJson(github)}}
+      run: echo "Hello ${{toJson(github)}}"
