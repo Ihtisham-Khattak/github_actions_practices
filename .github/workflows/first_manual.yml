@@ -25,3 +25,6 @@ jobs:
     steps:
     - name: Welcome Message
       run:  echo "Hello World"
+
+    - name: Github Action Context
+      run: Hello ${{toJson(github)}}
