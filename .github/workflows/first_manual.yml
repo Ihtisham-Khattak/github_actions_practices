@@ -1,19 +1,4 @@
-# # This is a basic workflow that is manually triggered
-# name: Manual workflow
-
-# # Controls when the action will run. Workflow runs when manually triggered using the UI
-# # or API.
-# on: [workflow_dispatch, push]
-
-# jobs:
-#   # This workflow contains a single job called "greet"
-#   greet:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Send greeting
-      # run: echo "Hello ${{ github.event.inputs.name }}"
-#     - name: Github Action Context
-      # run: echo "${{toJson(github)}}"
+# Where you get the Checkout action -> https://github.com/marketplace/actions/checkout
 
 name: practice_github
 
@@ -23,6 +8,10 @@ jobs:
   practice_level_1:
     runs-on: ubuntu-latest
     steps:
+    
+    - name: Github Checkout
+      uses: actions/checkout@v4
+
     - name: Welcome Message
       run:  echo "Hello World"
 
