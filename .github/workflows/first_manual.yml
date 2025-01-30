@@ -13,7 +13,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Welcome Message
-      run:  echo "Hello World"
+      run:  |
+            echo "Hello World"
+            ls -ltr
 
     - name: Github Action Context
       run: echo "Hello ${{toJson(github)}}"
