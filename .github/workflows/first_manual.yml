@@ -12,10 +12,6 @@ jobs:
     - name: Github Checkout
       uses: actions/checkout@v4
 
-    - name: Welcome Message
-      run:  |
-            echo "Hello World"
-            ls -ltr
-
-    - name: Github Action Context
-      run: echo "Hello ${{toJson(github)}}"
+    - name: Welcome To Shell Script
+      run: ./shell-script.sh
+      
