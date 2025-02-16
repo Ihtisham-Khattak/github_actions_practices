@@ -20,14 +20,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Testing Job
-        run: echo "Testing Job Env Runner"
+    - name: Github Checkout
+      uses: actions/checkout@v4
+
+    - name: Testing Job
+      run: echo "Testing Job Env Runner"
   
   #Deployment Job Runner
   dep_practice_level_3:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Github Checkout
+        uses: actions/checkout@v4
+        
       - name: "Deployment Job"
         run: echo "Deployment Job Runner"
 
