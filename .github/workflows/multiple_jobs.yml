@@ -1,0 +1,33 @@
+
+name: multiple_jobs
+
+on: push
+
+jobs:
+  # Development Job Runner
+  dev_practice_level_1:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Github Checkout
+      uses: actions/checkout@v4
+
+    - name: Development Job
+      run: echo "Development Job Env Runner"
+  
+  # Testing Job Runner
+  test_practice_level_2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Testing Job
+        run: echo "Testing Job Env Runner"
+  
+  #Deployment Job Runner
+  dep_practice_level_3:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Deployment Job"
+        run: echo "Deployment Job Runner"
+
